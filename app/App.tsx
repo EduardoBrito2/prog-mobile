@@ -8,11 +8,13 @@ import Cinco from './screept/Cinco';
 import Seis from './screept/Seis';
 import Sete from './screept/Sete';
 import Oito from './screept/Oito';
+import Nove from './screept/Nove';
+import Dez from './screept/Dez';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Oito/>
+      <Dez/>
       <StatusBar hidden/>
     </View>
   );
