@@ -10,13 +10,19 @@ import Sete from './screept/Sete';
 import Oito from './screept/Oito';
 import Nove from './screept/Nove';
 import Dez from './screept/Dez';
+import Onze from './screept/Onze';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
+  
+  const Stack = createNativeStackNavigator();
   return (
-    <View style={styles.container}>
-      <Dez/>
-      <StatusBar hidden/>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Onze} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

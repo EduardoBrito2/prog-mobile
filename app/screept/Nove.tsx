@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, Text, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
-export default function Sete() {
+export default function Nove() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [csenha, setCsenha] = useState('');
