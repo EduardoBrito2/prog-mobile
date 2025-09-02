@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-import Contacts from 'react-native-contacts'; // Biblioteca para acessar os contatos
+import Contacts from 'react-native-contacts';
 
-export default function ContactList() {
-  // Tipando o estado 'contacts' como um array de strings (string[])
+export default function Cinco() {
   const [contacts, setContacts] = useState<string[]>([]);
 
   useEffect(() => {
-    // Função para carregar os contatos
     const loadContacts = () => {
       Contacts.getAll()
         .then((data) => {
           if (data.length > 0) {
-            // Mapeia para pegar apenas o primeiro nome (givenName)
             const firstNames = data
               .map((contact) => contact.givenName)
-              .filter((name) => name !== null); // Filtra contatos com nome válido
+              .filter((name) => name !== null);
 
             // Atualiza o estado com os nomes
-            setContacts(firstNames as string[]); // Garantir que seja tratado como array de strings
+            setContacts(firstNames as string[]); 
           }
         })
         .catch((err) => {
@@ -26,10 +23,9 @@ export default function ContactList() {
         });
     };
 
-    loadContacts(); // Carrega os contatos ao inicializar o componente
+    loadContacts(); 
   }, []);
 
-  // Renderiza a lista de primeiros nomes
   const renderContact = ({ item }: { item: string }) => (
     <View style={styles.contactItem}>
       <Text style={styles.contactText}>{item}</Text> {/* Exibe o primeiro nome */}
