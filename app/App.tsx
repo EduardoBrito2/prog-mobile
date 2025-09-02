@@ -3,19 +3,9 @@ import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 // import Ionicons from 'react-native-vector-icons/Ionicons';
-import Um from './screept/Um';
-import Dois from './screept/Dois';
-import Tres from './screept/Tres';
-import Quatro from './screept/Quatro';
-import Cinco from './screept/Cinco';
-import Seis from './screept/Seis';
-import Sete from './screept/Sete';
-import Oito from './screept/Oito';
-import Nove from './screept/Nove';
-import Dez from './screept/Dez';
-import CepScreen from './Cep/screens/CepScreen';
-import { CepProvider } from './Cep/context/CepContext';
-import HistoryScreen from './Cep/screens/HistoryScreen';
+import Tres from './screept3/Tres';
+import Quatro from './screept3/Quatro';
+
 
 export default function App() {
   const Drawer = createDrawerNavigator();
@@ -98,15 +88,18 @@ export default function App() {
   //     </Drawer.Navigator>
   //   </NavigationContainer>
   // );
+  // return(
+  //   <CepProvider>
+  //     <NavigationContainer>
+  //       <Drawer.Navigator initialRouteName="Consulta CEP">
+  //         <Drawer.Screen name="Consulta CEP" component={CepScreen} />
+  //         <Drawer.Screen name="Histórico CEP" component={HistoryScreen} />
+  //       </Drawer.Navigator>
+  //     </NavigationContainer>
+  //   </CepProvider>
+  // )
   return(
-    <CepProvider>
-      <NavigationContainer>
-        <Drawer.Navigator initialRouteName="Consulta CEP">
-          <Drawer.Screen name="Consulta CEP" component={CepScreen} />
-          <Drawer.Screen name="Histórico CEP" component={HistoryScreen} />
-        </Drawer.Navigator>
-      </NavigationContainer>
-    </CepProvider>
+    <Quatro/>
   )
 }
 
