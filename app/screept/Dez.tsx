@@ -21,7 +21,7 @@ export default function Dez() {
   const salvar = () => {
     if (verificar()) {
       if (email && senha && selecionar) {
-        setResultado(`${email} - ${senha} - ${csenha} - ${selecionar} - ${manter ? "sim":"não"}`);
+        setResultado(`${email} - ${senha} - ${csenha} - ${selecionar} - ${manter ? "sim":"nãocd"}`);
       } else {
         setResultado('Preencha todos os campos.');
       }
